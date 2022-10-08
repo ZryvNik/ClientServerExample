@@ -1,0 +1,9 @@
+﻿global using ClientExample.Contracts.Common;
+global using ClientExample.DataAccess.Entities;
+global using ClientExample.Infrustructure;
+global using ClientExample.Infrustructure.Handlers;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Hosting;
+global using MediatR;
+global using ClientExample.DataAccess;
+global using Microsoft.EntityFrameworkCore;

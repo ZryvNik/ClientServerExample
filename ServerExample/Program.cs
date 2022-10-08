@@ -1,10 +1,3 @@
-using ServerExample.DataAccess;
-using Microsoft.EntityFrameworkCore;
-using MassTransit;
-using ServerExample.Infrustructure.MassTransit.Consumers;
-using ServerExample.Infrustructure.MassTransit.Events;
-using ServerExample.Infrustructure.MassTransit;
-
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
