@@ -1,14 +1,8 @@
 ﻿using ClientExample.Contracts.Common;
 using ClientExample.Contracts.GetNextMessageByPriority;
 using ClientExample.CrossCutting.Enums;
-using ClientExample.DataAccess.Exceptions;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ClientExample.DataAccess.Handlers
 {
@@ -24,7 +18,7 @@ namespace ClientExample.DataAccess.Handlers
         {
             var message = await _context.InputMessages
                 .Where(x => x.Status == MessageStatus.Added)
-                .OrderBy(x => x.Priority)
+                .OrderByDescending(x => x.Priority)
                 .FirstOrDefaultAsync(cancellationToken);
 
             if (message == null)
@@ -32,7 +26,7 @@ namespace ClientExample.DataAccess.Handlers
 
             message.Status = MessageStatus.InProgress;
 
-            await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync(cancellationToken);
 
             return new TakeToProcessingNextMessageByPriorityResult()
             {

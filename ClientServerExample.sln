@@ -8,23 +8,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerExample.App", "Server
 		{1A009B23-1B95-47CE-BEC9-E5787C867355} = {1A009B23-1B95-47CE-BEC9-E5787C867355}
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerExample.DataAccess", "ServerExample.DataAccess\ServerExample.DataAccess.csproj", "{B4E57C2E-CA73-427A-AC97-A4236AC3C4DF}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerExample.Contracts", "ServerExample.Contracts\ServerExample.Contracts.csproj", "{E68DB3F1-E67B-4134-BEB0-BFD3906B0A6E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerExample.Infrustructure", "ServerExample.Infrustructure\ServerExample.Infrustructure.csproj", "{1A009B23-1B95-47CE-BEC9-E5787C867355}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Schemas", "Schemas\Schemas.csproj", "{992C4256-6C20-48CA-85D1-440B94FC7D5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Schemas", "Schemas\Schemas.csproj", "{992C4256-6C20-48CA-85D1-440B94FC7D5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientExample.DataAccess", "ClientExample.DataAccess\ClientExample.DataAccess.csproj", "{D25A9EC0-AFB8-4302-9D31-B47708E363A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientExample.DataAccess", "ClientExample.DataAccess\ClientExample.DataAccess.csproj", "{D25A9EC0-AFB8-4302-9D31-B47708E363A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientExample.Contracts", "ClientExample.Contracts\ClientExample.Contracts.csproj", "{4A540826-D6AE-4B9A-8235-D63FB6CC3637}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientExample.Contracts", "ClientExample.Contracts\ClientExample.Contracts.csproj", "{4A540826-D6AE-4B9A-8235-D63FB6CC3637}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientExample.CrossCutting", "ClientExample.CrossCutting\ClientExample.CrossCutting.csproj", "{5EF2DA54-E0E0-4EB6-AE7D-CF64F6D2F628}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientExample.CrossCutting", "ClientExample.CrossCutting\ClientExample.CrossCutting.csproj", "{5EF2DA54-E0E0-4EB6-AE7D-CF64F6D2F628}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientExample.Infrustructure", "ClientExample.Infrustructure\ClientExample.Infrustructure.csproj", "{ADEAD404-E294-4BD9-B658-F8B5D58ED529}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientExample.Infrustructure", "ClientExample.Infrustructure\ClientExample.Infrustructure.csproj", "{ADEAD404-E294-4BD9-B658-F8B5D58ED529}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientExample.App", "ClientExample.App\ClientExample.App.csproj", "{327091BD-5903-40C6-9CA1-D824F9F7C2B6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientExample.App", "ClientExample.App\ClientExample.App.csproj", "{B3ED65AD-44A2-4A84-BF51-E884A3076673}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerExample.Infrustructure.UnitTests", "ServerExample.Infrustructure.UnitTests\ServerExample.Infrustructure.UnitTests.csproj", "{54A26F2A-1795-49E0-85E5-CA1E85E9BBB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientExample.DataAccess.UnitTests", "ClientExample.DataAccess.UnitTests\ClientExample.DataAccess.UnitTests.csproj", "{8F2189A0-A85D-4A46-9FB9-69CB61D09EF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,10 +38,6 @@ Global
 		{7C4AD474-8BC3-4AC4-9F5B-00CD4E9FD871}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C4AD474-8BC3-4AC4-9F5B-00CD4E9FD871}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C4AD474-8BC3-4AC4-9F5B-00CD4E9FD871}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B4E57C2E-CA73-427A-AC97-A4236AC3C4DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B4E57C2E-CA73-427A-AC97-A4236AC3C4DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B4E57C2E-CA73-427A-AC97-A4236AC3C4DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B4E57C2E-CA73-427A-AC97-A4236AC3C4DF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E68DB3F1-E67B-4134-BEB0-BFD3906B0A6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E68DB3F1-E67B-4134-BEB0-BFD3906B0A6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E68DB3F1-E67B-4134-BEB0-BFD3906B0A6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -68,10 +66,18 @@ Global
 		{ADEAD404-E294-4BD9-B658-F8B5D58ED529}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADEAD404-E294-4BD9-B658-F8B5D58ED529}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADEAD404-E294-4BD9-B658-F8B5D58ED529}.Release|Any CPU.Build.0 = Release|Any CPU
-		{327091BD-5903-40C6-9CA1-D824F9F7C2B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{327091BD-5903-40C6-9CA1-D824F9F7C2B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{327091BD-5903-40C6-9CA1-D824F9F7C2B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{327091BD-5903-40C6-9CA1-D824F9F7C2B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3ED65AD-44A2-4A84-BF51-E884A3076673}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3ED65AD-44A2-4A84-BF51-E884A3076673}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3ED65AD-44A2-4A84-BF51-E884A3076673}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3ED65AD-44A2-4A84-BF51-E884A3076673}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54A26F2A-1795-49E0-85E5-CA1E85E9BBB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54A26F2A-1795-49E0-85E5-CA1E85E9BBB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54A26F2A-1795-49E0-85E5-CA1E85E9BBB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54A26F2A-1795-49E0-85E5-CA1E85E9BBB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F2189A0-A85D-4A46-9FB9-69CB61D09EF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F2189A0-A85D-4A46-9FB9-69CB61D09EF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F2189A0-A85D-4A46-9FB9-69CB61D09EF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F2189A0-A85D-4A46-9FB9-69CB61D09EF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

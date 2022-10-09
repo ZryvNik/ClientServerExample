@@ -9,9 +9,9 @@ namespace ClientExample.Infrustructure
 {
     public class InputMessageProcessingService : BackgroundService
     {
-        private readonly IMediator _mediator;
+        private readonly ISender _mediator;
 
-        public InputMessageProcessingService(IMediator mediator)
+        public InputMessageProcessingService(ISender mediator)
         {
             _mediator = mediator;
         }
