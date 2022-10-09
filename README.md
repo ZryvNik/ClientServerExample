@@ -14,5 +14,5 @@
 
 ![Image alt](https://github.com/ZryvNik/ClientServerExample/raw/master/Images/2.png)
 
-### общая схема работы сервера и клиента в связке
+### Общая схема работы сервера и клиента в связке
 ![Image alt](https://github.com/ZryvNik/ClientServerExample/raw/master/Images/1.png)
