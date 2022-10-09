@@ -5,11 +5,11 @@ using MediatR;
 
 namespace ClientExample.DataAccess.Handlers
 {
-    public class AddInputMessageRequestHandler : IRequestHandler<AddInputMessageRequest>
+    public class AddInputMessageHandler : IRequestHandler<AddInputMessageRequest>
     {
         private readonly InputMessagesContext _context;
 
-        public AddInputMessageRequestHandler(InputMessagesContext context)
+        public AddInputMessageHandler(InputMessagesContext context)
         {
             _context = context;
         }

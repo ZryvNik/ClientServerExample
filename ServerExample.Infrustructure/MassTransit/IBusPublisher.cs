@@ -2,6 +2,6 @@
 {
     public interface IBusPublisher
     {
-        Task Pubish<T>(T @event);
+        Task Pubish<T>(T @event, CancellationToken cancellationToken);
     }
 }

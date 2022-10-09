@@ -20,7 +20,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ServerExample.Contracts\ServerExample.Contracts.csproj" />
-    <ProjectReference Include="..\ServerExample.DataAccess\ServerExample.DataAccess.csproj" />
     <ProjectReference Include="..\ServerExample.Infrustructure\ServerExample.Infrustructure.csproj" />
   </ItemGroup>
 

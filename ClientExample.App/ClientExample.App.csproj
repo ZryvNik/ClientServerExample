@@ -1,21 +1,26 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>8f147727-4e4d-46a7-8785-4de121860dd7</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MassTransit" Version="8.0.7" />
+    <PackageReference Include="MassTransit.Extensions.DependencyInjection" Version="7.3.1" />
+    <PackageReference Include="MediatR" Version="11.0.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.9" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ClientExample.DataAccess\ClientExample.DataAccess.csproj" />
     <ProjectReference Include="..\ClientExample.Infrustructure\ClientExample.Infrustructure.csproj" />
+    <ProjectReference Include="..\ServerExample\ServerExample.App.csproj" />
   </ItemGroup>
 
 </Project>

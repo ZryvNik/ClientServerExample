@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MassTransit" Version="8.0.7" />
     <PackageReference Include="MediatR" Version="11.0.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="3.1.18" />
   </ItemGroup>
@@ -14,6 +15,8 @@
   <ItemGroup>
     <ProjectReference Include="..\ClientExample.Contracts\ClientExample.Contracts.csproj" />
     <ProjectReference Include="..\ClientExample.CrossCutting\ClientExample.CrossCutting.csproj" />
+    <ProjectReference Include="..\ClientExample.DataAccess\ClientExample.DataAccess.csproj" />
+    <ProjectReference Include="..\Schemas\Schemas.csproj" />
   </ItemGroup>
 
 </Project>

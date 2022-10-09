@@ -1,10 +1,10 @@
-﻿using MassTransit;
+﻿using ClientExample.Contracts.AddMessage;
+using ClientExample.Contracts.Common;
+using MassTransit;
 using MediatR;
 using Schemas.OutputMessage;
-using ServerExample.Contracts.AddMessages;
-using ServerExample.Contracts.Common;
 
-namespace ServerExample.Infrustructure.MassTransit.Consumers
+namespace ClientExample.Infrustructure.MassTransit.Consumers
 {
     public class OutputMessageEventConsumer : IConsumer<IOutputMessageEvent>
     {
@@ -18,15 +18,12 @@ namespace ServerExample.Infrustructure.MassTransit.Consumers
         public async Task Consume(ConsumeContext<IOutputMessageEvent> context)
         {
             var @event = context.Message;
-            var request = new AddOutputMessageRangeRequest()
+            var request = new AddInputMessageRequest()
             {
-                Messages = new List<OutputMessageDto>() 
-                { 
-                    new OutputMessageDto() 
-                    { 
-                        Message = @event.Message, 
-                        Priority = @event.Priority 
-                    } 
+                InputMessage = new InputMessageDto()
+                {
+                    Message = @event.Message,
+                    Priority = @event.Priority
                 }
             };
 

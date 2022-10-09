@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.Extensions.Logging;
 using ServerExample.Contracts.AddMessages;
 using ServerExample.Contracts.Common;
 using ServerExample.Infrustructure.Extensions;
@@ -9,11 +10,13 @@ namespace ServerExample.Infrustructure.Handlers
 {
     public class GenerateOutputMessagesHandler : IRequestHandler<GenerateOutputMessagesRequest, GenerateOutputMessagesResult>
     {
-        public readonly IBusPublisher _busPublisher;
-
-        public GenerateOutputMessagesHandler(IBusPublisher busPublisher)
+        private readonly IBusPublisher _busPublisher;
+        private readonly ILogger<GenerateOutputMessagesHandler>? _logger;
+        public GenerateOutputMessagesHandler(IBusPublisher busPublisher,
+            ILogger<GenerateOutputMessagesHandler>? logger = null)
         {
             _busPublisher = busPublisher;
+            _logger = logger;
         }
 
         public async Task<GenerateOutputMessagesResult> Handle(GenerateOutputMessagesRequest request, CancellationToken cancellationToken)
@@ -26,10 +29,22 @@ namespace ServerExample.Infrustructure.Handlers
                     Message = new Random().RandomString(8)
                 });
 
-            foreach(var @event in messages.Select(x => new OutputMessageEvent(x.Priority, x.Message)))
+            var sendedCount = 0;
+
+            foreach (var @event in messages.Select(x => new OutputMessageEvent(x.Priority, x.Message)))
             {
-                await _busPublisher.Pubish(@event);
+                try
+                {
+                    await _busPublisher.Pubish(@event, cancellationToken);
+                    sendedCount++;
+                    _logger?.LogInformation("Success send {@event}", @event);
+                }
+                catch (Exception ex)
+                {
+                    _logger?.LogError(ex, "failed send {@event}", @event);
+                }
             }
+            _logger?.LogInformation("Successfully sent {sendedInputMessageCount} of {generatedInputMessageCount}", sendedCount, messages.Count());
 
             return new GenerateOutputMessagesResult()
             {
